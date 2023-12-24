@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Kanit:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&family=Smooch+Sans:wght@100&family=Ubuntu&family=Urbanist:wght@300&display=swap');
+        *{
+            font-family: 'Inclusive Sans', sans-serif;
+            font-family: 'Kanit', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Smooch Sans', sans-serif;
+            font-family: 'Ubuntu', sans-serif;
+            font-family: 'Urbanist', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            /* display: inline-block; */
+            text-align: center;
+            font-size: 3vw;
+            margin-bottom: 10px;
+        }
+        .container{
+            width: 99.9vw;
+            background: linear-gradient(to right, #9EDDFF,#A6F6FF);
+            height: 99.9vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .logo-img{
+            display: flex;
+            justify-content: center;
+        }
+        .boxes{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            width: 49vw;
+            padding: 10px 0;
+        }
+        .linkedin{
+            padding: 0;
+            width: 12vw;
+            font-size: 1.8vw;
+            background: none;
+            border: transparent;
+            font-weight: bold;
+            height: 3vw;
+        }
+        .linkedin:hover{
+           border: 2px solid gray;
+           border-radius: 10px;
+           cursor: pointer;
+           background: linear-gradient(to right,#CDFAD5,#89CFF3,#CDF5FD);
+        }
+        h2{
+            font-size: 1.8vw;
+            border-bottom: 2px solid red;
+        }
+        .caption {
+            display: flex;
+            /* justify-content: center; */
+            align-items: baseline;
+        }
+        .info{
+            /* border: 2px solid black; */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <h1>Contact me through</h1>
+            <div class="mail boxes">
+                <div class="logo-img">
+                    <img src="gmail.png" alt="" class="src">
+                </div>
+                <div class="caption">
+                    <h2>racheshpatil743@gmail.com</h2>
+                </div>
+                <div class="caption">
+                    <button class="linkedin" onclick="sendEmail()" >Click Here</button>
+                </div>
+            </div>
+            
+            <div class="Cell boxes">
+                <div class="logo-img">
+                    <img src="smartphone.png" alt="" class="src">
+                </div>
+                <div class="caption">
+                    <h2>+919019876827</h2>
+                </div>
+            </div>
+            
+            <div class="LinkedIn boxes">
+                <div class="logo-img">
+                    <img src="linkedin.png" alt="" class="src">
+                </div>
+                <div class="caption">
+                    <a href="https://www.linkedin.com/in/rachesh-patil-59b5b4215/" target="_blank"><button class="linkedin">Click Here</button></a>
+                </div>
+            </div>
+            
+            <div class="WhatsApp boxes">
+                <div class="logo-img">
+                    <img src="whatsapp.png" alt="" class="src">
+                </div>
+                <div class="caption">
+                    <h2>+919019876827</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendEmail() {
+            // Replace 'recipient@example.com' with the actual email address
+            var emailAddress = 'CllgCKCGDBkNwvJqdXsVbdLLFcVgCGztzLPMMGScVsJZBtcTsZxMXWSqWVnrbvPRGwdfRXFRRCg';
+
+            // Construct the mailto URL with the email address
+            var mailtoUrl = 'https://mail.google.com/mail/u/0/#inbox?compose=' + emailAddress;
+
+            // Redirect the user to the mailto URL
+            window.location.href = (mailtoUrl);
+        }
+    </script>
+</body>
+</html>

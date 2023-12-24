@@ -1,83 +1,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-.container{
+body{
+    background-color: #F1F6F9;
+}
+
+.container {
     display: flex;
 }
-.sidebar{
-    background-color: rgb(195, 190, 190);
-    width: 300px;
+
+.sidebar {
+    background: linear-gradient(#A6D0DD,#ADE4DB,#05BFDB);
+    width: 250px;
     height: 100vh;
+    transition: transform 0.3s ease-in;
 }
 
-.sidebar nav{
-    padding: 45px;
+.sidebar nav {
+    padding: 2.5vw; /* Responsive padding */
 }
 
-.sidebar nav li{
+.sidebar nav li {
     list-style: none;
-    font-size: 30px;
-    padding: 30px 0;
+    font-size: 2.5vw; /* Responsive font size */
+    padding: 2vw 0;
 }
-.sidebar nav li a{
+
+.sidebar nav li a {
     text-decoration: none;
-    color: blue;
+    color: #394867;
 }
 
-.main{
-    /* background-color: yellow; */
-    width: 90vw;
+.sidebarGo {
+    transform: translate(-443px, 0);
+    position: absolute;
 }
 
-.infoContainer{
-    width: 70vw;
+.main {
+    width: 100vw;
+}
+
+.infoContainer {
+    width: 80vw;
     height: 40vh;
-    margin: 145px auto;
-    /* background-color: azure; */
+    margin: 10vw auto; /* Responsive margin */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.devPic img{
-    height: 58vh;
+.devPic img {
+    height: 20vw; /* Responsive image height */
+    max-width: 100%; /* Ensure image does not exceed container width */
 }
 
-.devInfo{
+.devInfo {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.hello{
-    font-size: 85px;
+.hello {
+    color: #7360DF;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 4vw; /* Responsive font size */
 }
 
-.name{
-    font-size: 70px;
+.name {
+    padding: 0;
+    font-size: 5vw; /* Responsive font size */
+    margin-top: 0;
     font-weight: bold;
+    background: linear-gradient(to right,red,green,blue);
+    background-clip: text;
+    color: transparent;
 }
 
-.about{
-    font-size: 50px;
+.about {
+    font-size: 1.2vw; /* Responsive font size */
+    background: linear-gradient(to right,#79AC78,#78D6C6,#2B3499);
+    background-clip: text;
+    color: transparent;
 }
 
-.buttons button{
-    padding: 9px 14px;
-    border-radius: 22px;
+.buttons button {
+    padding: 0.1vw 0.45vw; /* Responsive padding */
+    border-radius: 0.7vw; /* Responsive border-radius */
     color: white;
-    margin: 0px 3px;
+    margin: 0.5vw 1vw; /* Responsive margin */
     font-weight: bold;
-    font-size: 21px;
-    background-color: #FFB534;
+    font-size: 1.7vw; /* Responsive font size */
+    background: linear-gradient( #80B3FF,#687EFF);
+    background-clip: text;
+    /* color: transparent;   */
     cursor: pointer;
+    margin-top: 1.5%;
+    color: #607274;
 }
 
-button:hover{
+button:hover {
     background-color: white;
     color: #FFB534;
+}
+
+/* Your existing styles... */
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    top: 1vw; /* Responsive top position */
+    left: 2vw; /* Responsive left position */
+}
+
+.menu,
+.close {
+    width: 1.5vw; /* Responsive width */
+    height: 1.5vw; /* Responsive height */
+    margin-top: 0.3vw; /* Responsive margin */
+    /* color: #FC4F00; */
+}
+
+.close {
+    margin-left: 9vw; /* Responsive margin */
+    margin-top: 1vw; /* Responsive margin */
+}
+
+/* Your existing styles... */
+
+
+@media screen and (max-width: 1350px) {
+    .infoContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .sidebar {
+        position: absolute;
+        transform: translate(-250px, 0);
+    }
+
+    .sidebarGo {
+        transform: translate(0, 0);
+    } */
 }

@@ -7,50 +7,65 @@
 }
 
 body{
-    background-color: #F1F6F9;
+    background:linear-gradient(#0F0F0F,#435585);
+    width: 100vw;
+    height: 100vh;
+    /* height:  100vh; */
+    /* display: flex;
+    align-items: center; */
+    /* width: 100vw; */
+    /* justify-content: center; */
 }
 
 .container {
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .sidebar {
-    background: linear-gradient(#A6D0DD,#ADE4DB,#05BFDB);
-    width: 250px;
+    background: linear-gradient(#435585,#818FB4);
+    /* width: 15rem; */
     height: 100vh;
     transition: transform 0.3s ease-in;
+    /* display: none; */
 }
 
 .sidebar nav {
-    padding: 2.5vw; /* Responsive padding */
+    padding: 2.5rem; /* Responsive padding */
 }
 
 .sidebar nav li {
     list-style: none;
-    font-size: 2.5vw; /* Responsive font size */
-    padding: 2vw 0;
+    font-size: 2.5rem; /* Responsive font size */
+    padding: 2rem 0;
 }
 
 .sidebar nav li a {
     text-decoration: none;
-    color: #394867;
+    color: #52D3D8;
 }
 
 .sidebarGo {
     transform: translate(-443px, 0);
-    position: absolute;
+    /* position: absolute; */
 }
 
 .main {
-    width: 100vw;
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    justify-content: center;
+    align-items: center;
 }
 
 .infoContainer {
-    width: 80vw;
-    height: 40vh;
-    margin: 10vw auto; /* Responsive margin */
+    width: 70rem;
+    height: 80vh;
+    /* margin: 10vw auto; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .devPic img {
@@ -67,45 +82,49 @@ body{
 .hello {
     color: #7360DF;
     padding: 0;
-    margin-bottom: 0;
-    font-size: 4vw; /* Responsive font size */
+    margin-bottom: 1rem;
+    font-size: 4rem; /* Responsive font size */
+    line-height: 1.5rem;
+
 }
 
-.name {
+.name h1 {
     padding: 0;
-    font-size: 5vw; /* Responsive font size */
+    font-size: 4rem; /* Responsive font size */
     margin-top: 0;
     font-weight: bold;
-    background: linear-gradient(to right,red,green,blue);
+    background: linear-gradient(to right,#0174BE,#00A9FF,#A0E9FF);
     background-clip: text;
     color: transparent;
+    line-height: 4.6rem;
 }
 
 .about {
-    font-size: 1.2vw; /* Responsive font size */
-    background: linear-gradient(to right,#79AC78,#78D6C6,#2B3499);
+    font-size: 2rem; /* Responsive font size */
+    background: linear-gradient(to right,#FFB534,#FFC47E);
     background-clip: text;
     color: transparent;
+}
+.buttons{
+    margin-top: 1rem;
 }
 
 .buttons button {
     padding: 0.1vw 0.45vw; /* Responsive padding */
-    border-radius: 0.7vw; /* Responsive border-radius */
-    color: white;
-    margin: 0.5vw 1vw; /* Responsive margin */
+    border-radius: 0.7rem; /* Responsive border-radius */
+    margin: 0.5rem 1rem; /* Responsive margin */
     font-weight: bold;
-    font-size: 1.7vw; /* Responsive font size */
-    background: linear-gradient( #80B3FF,#687EFF);
-    background-clip: text;
-    /* color: transparent;   */
+    font-size: 1.7rem; 
+    background: linear-gradient(#FF6666,#FCAEAE);;
     cursor: pointer;
     margin-top: 1.5%;
-    color: #607274;
+    color: #001C30;
+    /* color:; */
 }
 
 button:hover {
-    background-color: white;
-    color: #FFB534;
+    color: #090580;
+    background: white;
 }
 
 /* Your existing styles... */
@@ -113,39 +132,126 @@ button:hover {
 .hamburger {
     position: absolute;
     cursor: pointer;
-    top: 1vw; /* Responsive top position */
-    left: 2vw; /* Responsive left position */
+    top: 1rem; /* Responsive top position */
+    left: 2rem; /* Responsive left position */
+    /* display: flex; */
 }
 
 .menu,
 .close {
-    width: 1.5vw; /* Responsive width */
-    height: 1.5vw; /* Responsive height */
-    margin-top: 0.3vw; /* Responsive margin */
-    /* color: #FC4F00; */
+    width: 1.5rem; /* Responsive width */
+    height: 1.5rem; 
+    margin-top: 0.3rem; 
+    color: #FC4F00;
 }
 
 .close {
-    margin-left: 9vw; /* Responsive margin */
-    margin-top: 1vw; /* Responsive margin */
-}
+    margin-left: 10rem;
+    /* margin-top: 1vw; */
+} 
 
 /* Your existing styles... */
 
 
 @media screen and (max-width: 1350px) {
+  
     .infoContainer {
+        width: 50rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    /* .sidebar {
-        position: absolute;
-        transform: translate(-250px, 0);
+    .name h1{
+        display: flex;
+        justify-content: center;
+        line-height: 4rem;
+        font-size: 4rem;
     }
 
-    .sidebarGo {
-        transform: translate(0, 0);
-    } */
+    .hello{
+        display: flex;
+        justify-content: center;
+        line-height: 2rem;
+        font-size: 2rem;
+    }
+    .about{
+        display: flex;
+        max-width: 40rem;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        line-height: 1rem;
+        font-size: 1rem;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .sidebar{
+        width: 10rem;
+        
+    }
+    .sidebar nav li {
+        list-style: none;
+        font-size: 1rem; /* Responsive font size */
+        padding: 1.5rem 0;
+    }
+    .close {
+        margin-left: 5.5rem;
+        /* margin-top: 1vw; */
+    } 
+}
+
+@media screen and (max-width: 1000px){
+    .close {
+        margin-left: 4rem;
+        /* margin-top: 1vw; */
+    }
+}
+
+@media screen and (max-width: 750px){
+    .sidebar{
+        height: 100vh;
+    }
+   
+    .infoContainer {
+        width: 50rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hello{
+      
+        line-height: 1rem;
+        font-size: 2.5rem;
+    }
+    .name h1{
+        display: flex;
+        justify-content: center;
+        line-height: 3rem;
+        font-size: 3rem;
+    }
+    .sidebar{
+        width: 8rem;
+        justify-content: center;
+    }
+    .close {
+        margin-left: 1.5rem;
+        /* margin-top: 1vw; */
+    }
+    .sidebar nav li {
+        /* list-style: none; */
+        font-size: 1rem; /* Responsive font size */
+        line-height: 0.8rem;
+        /* padding: 1.5rem 0; */
+        padding-left: 1rem;
+    }
+    .buttons button {
+        padding: 0.1rem 0.45rem; 
+        border-radius: 0.7rem; 
+        margin: 0.5rem 1rem; 
+        font-size: 0.5rem; 
+    }
 }
